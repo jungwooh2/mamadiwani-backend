@@ -28,7 +28,7 @@ app.post("/create-checkout-session", async (req, res) => {
       cancel_url: "https://gorgeous-chebakia-86927c.netlify.app/cancel",
     });
 
-    res.json({ url: session.url });
+    res.json({ url: session.url }); //
   } catch (err) {
     console.error("Stripe error:", err);
     res.status(500).json({ error: "Payment initialization failed" });
